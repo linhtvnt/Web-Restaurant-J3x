@@ -1,0 +1,39 @@
+@CHARSET "UTF-8";
+.j2store_products {
+	display: block;
+	position: relative;
+}
+ul.j2store_products_container {
+	margin: 0px;
+	padding: 0px;
+}
+
+ul.j2store_products_container li {
+    list-style-type: none;
+    background: none;
+}
+
+.j2store_product_image_block {}
+
+.j2store_product_content_block{}
+
+h2.j2store_product_title {}
+
+.j2store_product_sku_category {}
+
+.j2store_product_sku_category span {
+	display: inline;
+	font-size: 95%;
+	color: #cccccc;
+	margin-right: 5px;
+}
+
+.j2store_product_introtext {}
+
+.j2store_product_price{}
+
+.j2store_product_sku{}
+
+.j2store_product_sku{}
+
+.j2store_product_cart{}

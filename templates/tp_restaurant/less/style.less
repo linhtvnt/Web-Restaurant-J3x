@@ -1,0 +1,595 @@
+/** 
+ *------------------------------------------------------------------------------
+ * @package       T3 Framework for Joomla!
+ *------------------------------------------------------------------------------
+ * @copyright     Copyright (C) 2004-2013 JoomlArt.com. All Rights Reserved.
+ * @license       GNU General Public License version 2 or later; see LICENSE.txt
+ * @authors       JoomlArt, JoomlaBamboo, (contribute to this project at github 
+ *                & Google group to become co-author)
+ * @Google group: https://groups.google.com/forum/#!forum/t3fw
+ * @Link:         http://t3-framework.org 
+ *------------------------------------------------------------------------------
+ */
+
+// ---------------------------------------------------------
+// MAIN TEMPLATE STYLES
+// ---------------------------------------------------------
+
+// 
+// HEADER
+// ---------------------------------------------------------
+
+.t3-header {
+  padding-top: @t3-global-padding;
+  padding-bottom: @t3-global-padding;
+}
+
+
+// Logo
+// ----
+.logo {
+
+  text-align: center;
+
+  // Left align the logo on  Tablets / Desktop
+  @media screen and (min-width: @screen-sm) {
+    text-align:center;
+  }
+
+  a {
+    display: inline-block;
+    line-height: 1;
+    margin: 0;
+  }
+}
+
+// Logo Image
+// ----------
+.logo-image {
+  // Hide sitename and slogan
+  span, small {
+    display: none;
+  }
+}
+
+// Logo Text
+// ----------
+.logo-text {
+
+  a {
+    text-decoration: none;
+    font-size: ceil(@font-size-base * 2);
+    font-weight: bold;
+    text-shadow: 4px 4px 0px rgba(0,0,0,0.1);
+    
+  }
+
+  &:hover a,
+  a:hover,
+  a:active,
+  a:focus {
+    text-decoration: none;
+  }
+
+  // Taglines
+  .site-slogan {
+    display: block;
+    font-size: @font-size-base;
+    margin-top: 5px;
+  }
+
+}
+
+// Head Search
+// -----------
+.head-search {
+
+  margin-top: @t3-global-margin;
+  .clearfix();
+
+  form {
+    margin: 0;
+  }
+  
+  label {
+    display: none;
+  }
+  
+  .search {
+    position: relative;
+    // Place a search icon
+    &:before {
+      font-family: "FontAwesome";
+      content: "\f002";
+      display: block;
+      position: absolute;
+      left: 10px;
+      top: 6px;
+      color: @gray;
+    }
+    // Float to right on Tablets / Desktop
+    @media screen and (min-width: @screen-sm) {
+      float: right;
+    }
+  }
+  
+  .form-control {
+    width : 100%;
+    padding-left: 30px;
+
+    // Width Control on Tablets / Desktop
+    @media screen and (min-width: @screen-sm) {
+      width: 150px;
+      // focus state
+      &:focus {
+        width: 200px;
+      }
+    }
+
+  }
+
+}
+.module-title{
+ color:@yellow;
+}
+// ---------------------------------------------------------
+// SLIDESHOW
+// ---------------------------------------------------------
+.tp-slideshow{
+  .sp-iStoreii-layout h1.sp-title{
+    font-size:30px;
+    color:@white;
+  }
+  .sp-iStoreii-layout .sp-full-text{
+    font-size:30px;
+    color:@white;
+  }
+  .read-more-wrapper a{
+    padding:15px 50px;
+    border:1px solid @orange;
+    color:@white;
+    background:@orange;
+    font-size:15px;
+    font-weight:bold;
+    
+    &:hover{
+      background:@white;
+      border:1px solid @white;
+      color:@orange;
+    }
+  }
+}
+
+
+// ---------------------------------------------------------
+// J2STORE
+// ---------------------------------------------------------
+
+.j2store_products{
+  ul.j2store_products_container li{
+   float:left;
+   margin-left:41px;
+   margin-top:40px;
+   padding:20px 16px 14px 17px;
+   box-shadow:5px 5px 0 rgba(0, 0, 0, 0.1);
+   background-color:#F5F5F5;
+   
+   .j2store-product-info{
+     text-align:center;
+   }
+   h2.j2store_product_title{
+    font-size:16px;
+    text-align:center;
+    
+  }
+  .product_special_price{
+    margin-left:20px;
+    font-size:20px;
+  }
+  .j2store .product_price, .j2store .product_special_price{
+    display:inline;
+    color:@brand-primary;
+  }
+  .product_quantity_input input{
+    display:inline;
+    width:50px;
+    border-radius:0px;
+  }
+  }
+  .j2store strike{
+     color:@gray;
+     font-size:18px;
+  }
+  .j2store_add_to_cart{
+    margin-top:10px;
+  }
+  .j2store-notification{
+    margin-top:-145px;
+    position:absolute;
+  }
+}
+.j2store-modal .modal{
+  display:inline;
+}
+// ---------------------------------------------------------
+// BUTTON STYLE
+// ---------------------------------------------------------
+
+.btn{
+  padding:6px 50px;
+  
+  
+  &:hover{
+    background:@yellow;
+    border:1px solid @yellow;
+  }
+  
+}
+
+// ---------------------------------------------------------
+// CUSTOM STYLE
+// ---------------------------------------------------------
+
+.tp-menu{
+    box-shadow:5px 5px 0 rgba(0, 0, 0, 0.1);
+    padding:14px;
+    
+    .inner{
+      box-shadow:none;
+    }
+}
+.tp-mycart{
+    box-shadow:5px 5px 0 rgba(0, 0, 0, 0.1);
+    padding:14px;
+    
+    .inner{
+      box-shadow:none;
+    }
+}
+.tp-related{
+  li{
+    list-style:square outside none;
+    line-height:2em;
+  }
+}
+// ---------------------------------------------------------
+// SPOTLIGHTS
+// ---------------------------------------------------------
+
+.t3-sl {
+  padding-bottom: @t3-global-padding * 2;
+  padding-top: @t3-global-padding * 2;
+  // Larger padding in Tablet / Desktop
+  @media screen and (min-width: @screen-sm) {
+    padding-bottom: @t3-global-padding * 3;
+    padding-top: @t3-global-padding * 3;
+  }
+}
+
+// Spotlight 1
+// -----------
+.t3-sl-1 {
+}
+
+// Spotlight 2
+// -----------
+.t3-sl-2 {
+}
+
+// Spotlight 3
+// -----------
+.t3-sl-3 {
+}
+
+// Spotlight 4
+// -----------
+.t3-sl-4 {
+}
+.tp-features{
+  background:@orange;
+  text-align:center;
+  
+ .module-title{
+   color:@white;
+   text-shadow:1px 1px 1px #222222;
+ }
+ p{
+   color:@gray-lighter;
+ }
+}
+.tp-bottom{
+  
+  .tp-box-1,.tp-box-2{
+	  border:1px solid #f5f5f5;
+	  box-shadow:5px 5px 0 rgba(0, 0, 0, 0.1);
+	  padding:10px;
+	  
+	  .inner{
+		border:none;
+		box-shadow:none;
+		
+		h4{
+         color:#F58300;
+    }
+  }
+}
+}
+
+// ---------------------------------------------------------
+// MAIN BODY
+// ---------------------------------------------------------
+.t3-mainbody {
+  padding-top: @line-height-computed ;
+  padding-bottom: @line-height-computed;
+}
+
+// Content
+// -------
+.t3-content {
+  padding-top: @line-height-computed ;
+  padding-bottom: @line-height-computed;
+  
+  .blog{
+    .page-header{
+		a{
+		  font-size:18px; 
+		 }
+      }
+     .item-image{ 
+       img{
+         max-width:80%; 
+        }
+      }
+    .j2store{
+      text-align:center;
+    }
+    .j2store .product_price, .j2store .product_special_price{
+      display:inline;
+      color:@brand-primary;
+    }
+    .product_special_price{
+	  margin-left:20px;
+	  font-size:20px;
+     }
+    .product_quantity_input input{
+	  display:inline;
+	  width:50px;
+	  border-radius:0px;
+     }
+     .j2store strike{
+     color:@gray;
+     font-size:18px;
+  }
+  .j2store_add_to_cart{
+    margin-top:10px;
+  }
+  .j2store-notification{
+    margin-top:-145px;
+    position:absolute;
+  }
+  }
+  .item-page{
+	.item-image{
+	  margin-right:20px;
+	}
+    a{
+      color:@gray;
+    }
+    .j2store{
+      margin-top:30px;
+    }
+    .j2store .product_price, .j2store .product_special_price{
+      display:inline;
+      color:@brand-primary;
+    }
+    .product_special_price{
+	  margin-left:20px;
+	  font-size:20px;
+     }
+    .product_quantity_input input{
+	  display:inline;
+	  width:50px;
+	  border-radius:0px;
+     }
+     .j2store strike{
+     color:@gray;
+     font-size:18px;
+  }
+  .j2store_add_to_cart{
+    margin-top:10px;
+  }
+  .j2store-notification{
+    margin-top:-145px;
+    position:absolute;
+    margin-left:35%;
+  }
+  }
+  
+}
+
+// ---------------------------------------------------------
+// J2STORE LAYOUT
+// ---------------------------------------------------------
+
+.j2shop-layout{
+	.article-header{
+	  h2{
+	    font-size:20px;
+	  }
+	}
+	.btn{
+	  padding:6px 25px;
+	}
+	
+   .j2store-product-info{
+		
+		// This style apply when special price not defined
+		
+		.product_price{
+		  display:inline-block;
+		  margin-bottom:10px;
+		}
+		strike{
+			color:@gray;
+			font-size:15px;
+		}
+		.product_special_price{
+		   color:@brand-primary;
+		   font-size:18px;
+		}
+		.product_price,
+		.product_special_price{
+		  display:inline-block;
+		  margin-bottom:10px;
+		}
+		
+		.product_quantity_input{
+			display:none;
+		}
+		.j2store-notification{
+		  position:absolute;
+		  margin-top:-100px;
+		}
+		
+     }
+}
+
+// Sidebars
+// --------
+.t3-sidebar {
+  padding-top: @line-height-computed;
+  padding-bottom: @line-height-computed;
+  
+  
+}
+
+.t3-sidebar-1 {
+}
+
+.t3-sidebar-2 {
+}
+
+
+
+// ---------------------------------------------------------
+// FOOTER
+// ---------------------------------------------------------
+.t3-footer {
+  border-top: 1px solid @t3-border-color;
+  background: @gray;
+  color: @t3-footer-text-color;
+  .clearfix();
+
+  // small
+  small {
+    display: block;
+    font-size: 100%; //Use global footer font size.
+  }
+
+  // links
+  a {
+    // Link States
+    &:hover, &:active, &:focus {
+    }
+  }
+
+}
+
+// Foot Nav
+// --------
+.t3-footnav {
+  padding: @t3-global-padding 0;
+  .clearfix();
+
+  // Larger padding on Tablet / Desktop
+  @media screen and (min-width: @screen-sm) {
+    padding: (@t3-global-padding * 2) 0;
+  }
+
+  // Footnav Modules
+  .t3-module {
+    background: @gray;
+    color: @t3-footer-module-text-color;
+    margin-top: @line-height-computed / 2;
+    margin-bottom: @line-height-computed / 2;
+    color:@white;
+     
+     a{
+       color:@gray-lighter;
+       
+       &:hover{
+         color:@white;
+       }
+     }
+    .module-title {
+      color: @white;
+      font-size: @font-size-large;
+      margin-bottom: 35px;
+    }
+
+    ul {
+      list-style: none;
+      margin-left: 0;
+      margin-bottom: 0;
+      padding-left: 0;
+
+      > li {
+        line-height: 24px;
+        // links
+        > a {
+          color:@gray-lighter;
+          margin-left:7px;
+          // Link States
+          &:hover, &:active, &:focus {
+            color:@white;
+          }
+        }
+      }
+    }
+
+  }
+  .hour-open{
+    float:right;
+  }
+
+}
+
+// Copyright
+// ---------
+.t3-copyright {
+  border-top: 1px solid @t3-border-color;
+  font-size: @font-size-small;
+  padding: 40px 0 10px;
+  color:@gray-lighter;
+  .clearfix();
+  small {
+    margin-bottom: 5px;
+    
+    a{
+      color:@gray-lighter;
+      
+      &:hover{
+        color:@white;
+      }
+    }
+  }
+}
+
+.copyright {
+    margin-bottom: @line-height-computed;
+}
+
+.poweredby {
+  .clearfix();
+
+  // Align right on Tablet / Desktop
+  @media screen and (min-width: @screen-sm-max) {
+    text-align: right;
+  }
+
+  .t3-logo,
+  .t3-logo-small {
+    opacity: .8;
+    display: inline-block;
+  }
+}
